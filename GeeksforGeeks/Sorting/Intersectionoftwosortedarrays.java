@@ -44,7 +44,17 @@ Testcase 3: no common elements so print -1.
 
 ###########################################################Solution############################################################
 */
-int i=0,j=0,k=0;
+class Intersection
+{
+    /* Function prints Intersection of arr1[] and arr2[] 
+    n is the number of elements in arr1[] 
+    m is the number of elements in arr2[] 
+    Return the array
+    */
+    static ArrayList<Integer> printIntersection(int arr1[], int arr2[], int n, int m) 
+    {
+        // add your code here
+        int i=0,j=0,k=0;
         ArrayList<Integer> arr= new ArrayList<Integer>();
         while(i<n && j<m){
             if(arr1[i]==arr2[j]){
@@ -77,3 +87,6 @@ int i=0,j=0,k=0;
             return arr;
         }
         return arr;
+    }
+
+}
