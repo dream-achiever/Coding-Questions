@@ -56,3 +56,30 @@ class Tree{
         return count;
     }
 }
+/*Optimal Solution*/
+class Tree{
+    int count =0;
+    void in(Node root,int l, int h){
+        if(root!=null){
+            if(root.data>=l && root.data<=h){
+                count++;
+                in(root.left,l,h);
+                in(root.right,l,h);
+            }
+            else {
+                if(root.data<l){
+                    in(root.right,l,h);
+                }
+                else {
+                    in(root.left,l,h);
+                }
+            }
+        }
+    }
+    int getCount(Node root,int l, int h)
+    {
+        //Your code here
+        in(root,l,h);
+        return count;
+    }
+}
